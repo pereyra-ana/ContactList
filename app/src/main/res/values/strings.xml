@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ContactList</string>
+    <string name="icon_user">&#xf007;</string>
+    <string name="icon_app">&#xf0c0;</string>
+    <string name="icon_mail">&#xf0e0;</string>
+    <string name="icon_phone">&#xf095;</string>
 </resources>

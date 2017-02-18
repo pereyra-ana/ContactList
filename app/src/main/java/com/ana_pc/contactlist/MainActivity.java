@@ -2,12 +2,14 @@ package com.ana_pc.contactlist;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -24,15 +26,14 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         lista = (ListView)findViewById(R.id.lista);
         lista.setAdapter( miAdapter);
         findViewById(R.id.add).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
                 startActivityForResult(intent, 85);
-
             }
         });
     }
@@ -79,8 +80,11 @@ public class MainActivity extends Activity {
                 Log.d("Lista De Ejemplo", "(" + position + ") Estoy reciclando un objeto");
             }
 
-            TextView nombreView = (TextView) convertView.findViewById(R.id.nombre_de_persona);
+            TextView iconView = (TextView) convertView.findViewById(R.id.person_icon);
+            Typeface font = Typeface.createFromAsset( getAssets(), "fontawesome-webfont.ttf" );
+            iconView.setTypeface(font);
 
+            TextView nombreView = (TextView) convertView.findViewById(R.id.nombre_de_persona);
             nombreView.setText(nombre);
 
             return convertView;

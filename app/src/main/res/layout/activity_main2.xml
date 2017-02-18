@@ -10,13 +10,78 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.ana_pc.contactlist.Main2Activity">
 
-
-    <EditText
-        android:id="@+id/fullName"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Add full name"
-        />
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Add name"
+            android:layout_marginBottom="10dp"
+            />
+
+        <EditText
+            android:id="@+id/lastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Add lastname"
+            android:layout_below="@+id/name"
+            android:layout_marginBottom="10dp"
+            />
+
+       <LinearLayout
+           android:id="@+id/container_email_address"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/lastName"
+           android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/icon_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/icon_mail"
+            android:paddingRight="10dp"
+            />
+
+        <EditText
+            android:id="@+id/emailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Add email address"
+            android:inputType="textEmailAddress"
+            />
+
+       </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/container_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/container_email_address"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/icon_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/icon_phone"
+                android:paddingRight="10dp"
+                />
+
+            <EditText
+                android:id="@+id/phoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Add phone number"
+                android:inputType="phone"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/save"

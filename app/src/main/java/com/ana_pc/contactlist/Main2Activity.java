@@ -2,6 +2,7 @@ package com.ana_pc.contactlist;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -13,6 +14,13 @@ public class Main2Activity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
+        Typeface font = Typeface.createFromAsset( getAssets(), "fontawesome-webfont.ttf" );
+
+        TextView iconMailView = (TextView)findViewById(R.id.icon_mail);
+        iconMailView.setTypeface(font);
+
+        TextView iconPhoneView = (TextView)findViewById(R.id.icon_phone);
+        iconPhoneView.setTypeface(font);
 
         findViewById(R.id.save).setOnClickListener(new View.OnClickListener() {
             @Override
