@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.ana_pc.contactlist.Main3Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/layout_data">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/icon_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/icon_image"
+                android:paddingRight="10dp"
+                android:textSize="18dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact image"
+                android:id="@+id/edit_image"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/image_contact"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/layout_data"
+        >
+
+        <TextView
+            android:id="@+id/nombre_de_persona"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name: "
+            android:layout_marginBottom="10dp"
+            android:textSize="18dp"
+            />
+
+        <TextView
+            android:id="@+id/lastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Last name: "
+            android:layout_below="@+id/nombre_de_persona"
+            android:layout_marginBottom="10dp"
+            android:textSize="18dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/container_email_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lastName"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/icon_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/icon_mail"
+                android:paddingRight="10dp"
+                android:textSize="18dp"
+                />
+
+            <TextView
+                android:id="@+id/emailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email address: "
+                android:textSize="18dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/container_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/container_email_address"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/icon_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/icon_phone"
+                android:paddingRight="10dp"
+                android:textSize="18dp"
+                />
+
+            <TextView
+                android:id="@+id/phoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone number: "
+                android:textSize="18dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/edit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/dial_number_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Call"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</RelativeLayout>

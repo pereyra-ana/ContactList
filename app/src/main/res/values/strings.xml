@@ -6,4 +6,5 @@
     <string name="icon_phone">&#xf095;</string>
     <string name="icon_delete">&#xf1f8;</string>
     <string name="icon_edit">&#xf044;</string>
+    <string name="icon_image">&#xf03e;</string>
 </resources>

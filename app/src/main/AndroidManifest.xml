@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ana_pc.contactlist">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/user_image"
@@ -15,8 +16,29 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main2Activity"></activity>
-        <uses-permission android:name="android.permission.CAMERA"> </uses-permission>
+        <activity
+            android:name=".Main2Activity"
+            android:label="User Form" />
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.ana_pc.contactlist"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths">
+        </meta-data>
+        </provider>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".Main3Activity"
+            android:label="User Dashboard" />
+
+        <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+        <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
     </application>
 
 </manifest>
